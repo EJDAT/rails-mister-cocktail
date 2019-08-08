@@ -16,3 +16,15 @@ ingredients = drinks["drinks"]
 ingredients.each do |ingredient|
   Ingredient.create(name: ingredient["strIngredient1"])
 end
+
+url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink'
+drinks_serialized = open(url).read
+drinks = JSON.parse(drinks_serialized)
+
+cocktails = drinks["drinks"]
+cocktails.each do |cocktail|
+  Cocktail.create(name: cocktail["strDrink"])
+end
+
+# export { fetchMovies };
+
