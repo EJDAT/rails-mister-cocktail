@@ -3,5 +3,5 @@ class Ingredient < ApplicationRecord
   validates :name, uniqueness: true, presence: true
   has_many :doses
 
-  validates :ingredients, inclusion: { in: INGREDIENTS }
+  # validates :ingredients, inclusion: { in: INGREDIENTS }
 end
