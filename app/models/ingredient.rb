@@ -1,5 +1,5 @@
 class Ingredient < ApplicationRecord
-  INGREDIENTS = Ingredient.all
+  # INGREDIENTS = Ingredient.all
   validates :name, uniqueness: true, presence: true
   has_many :doses
 

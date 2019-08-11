@@ -23,8 +23,31 @@ drinks = JSON.parse(drinks_serialized)
 
 cocktails = drinks["drinks"]
 cocktails.each do |cocktail|
-  Cocktail.create(name: cocktail["strDrink"])
-end
 
-# export { fetchMovies };
+Cocktail.create(name: cocktail["strDrink"])
 
+#   tata = Cocktail.create(name: cocktail["strDrink"])
+#   cocktail_id = cocktail["idDrink"]
+#   url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=#{cocktail_id}"
+#   drink_serialized = open(url).read
+#   drink = JSON.parse(drink_serialized)
+#   data = drink["drinks"].first
+#   ingredients_with_blank = data.select! { |k, v| k.include? "strIngredient" }
+#   ingredients = ingredients_with_blank.reject! { |k, v| v.blank? }
+
+#   ingredients
+#   ingredients.each do |k, ingredient|
+#     toto = Ingredient.find_by(name: ingredient)
+#     if toto.present?
+#       dose = Dose.new
+#       dose.ingredient = toto
+#       dose.cocktail = tata
+#       dose.description = "toto"
+#       # p dose.valid?
+#       # p dose.errors.messages
+#       dose.save
+#     end
+#   end
+# end
+
+# # export { fetchMovies };
