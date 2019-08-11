@@ -1,13 +1,24 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('Henshin-cocktails.jpg');">
+<!-- <nav class="navbar sticky-top navbar-dark"> -->
+
+<!-- <div class="navbar navbar-expand-sm navbar-light navbar-cocktail">
+  <a class="navbar-brand" href="#">Sir please, Cocktail</a>
+
+ -->
+<!--Navbar-->
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('fond.jpeg');">
   <div class="container">
-    <h1>Cocktails</h1>
+    <h1>Le Saint Graal du Barman</h1>
   </div>
+  <p>
+    <span id="banner-typed-text" style="padding-left: 150px"></span>
+  </p>
 </div>
 
 <div class="container mt-3">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('Henshin-cocktails.jpg');">
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-url('mudassir-ali-ouCljTdFkJU-unsplash.jpg');">
         <%= link_to cocktail.name, cocktail_path(cocktail) %>
       </div>
     <% end %>
